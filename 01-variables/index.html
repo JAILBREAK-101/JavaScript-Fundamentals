@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+
+    <script>
+        function changeColor() {
+            document.getElementById("paragraph").style.color = "blue";
+            document.getElementById("paragraph").style.fontWeight = "bold";
+        }
+    </script>
+</head>
+
+<body>
+    <h1 onclick="console.log('H1 clicked')">JavaScript Basics</h1>
+
+    <p id="paragraph">My color will change</p>
+
+    <button onclick="changeColor()">Change color</button>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
