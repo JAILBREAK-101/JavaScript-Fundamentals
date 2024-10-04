@@ -36,20 +36,65 @@ console.log(age);  // Output: 25
 
 ---
 
+## 🎥 Video 2: Data Types in JavaScript and Project Design Walkthrough
+
+### Overview
+In this video, we delve into the core data types in JavaScript and review the initial design template for our project. Understanding how data types work in JavaScript is crucial as it forms the basis of how we handle and manipulate data in the language.
+
+### Key Concepts Covered
+- **Primitive Data Types**  
+  Explore JavaScript’s seven primitive data types: `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, and `bigint`.
+
+- **Complex Data Types**  
+  Learn about objects and arrays and how to use them for structuring and organizing your data.
+
+- **Figma Template Walkthrough**  
+  Get a quick overview of the Figma design template that we’ll be using for the project, showcasing UI components, layouts, and how to modify the design as needed.
+
+### Code Snippet
+Below is a basic example demonstrating JavaScript data types and type conversion:
+
+```javascript
+let number = 42;            // Number data type
+let name = "JavaScript";    // String data type
+let isLearning = true;      // Boolean data type
+let students = ["John", "Princess", "Queen"] //Array data structure
+let schoolBag = {
+  books: ["Math", "Science", "English"],
+  pencils: 10,
+  erasers: 5
+} // Object data structure
+
+console.log(typeof number);           // Output: number
+console.log(typeof stringNumber);     // Output: string
+```
+
+🔗 [Watch Video 2 on YouTube](https://www.youtube.com/watch?v=3XyZChF0BxE)
+
+### Figma Design Template
+The initial design template for the project can be accessed here:  
+🔗 [Figma Design Template](https://www.figma.com/design/IG8gQB5OftuioByvsrdI6B/Ecommerce-Web-Pages-(Free)-(Community)-(Copy)?node-id=0-1&node-type=canvas&t=DjtjOE6AxbIUSPFo-0)
+
+---
+
 ## 📂 Repository Structure
 
 ```bash
-├── 01-variables # Code files folder for the first video
-    ├── index.html           # HTML file for setting up JavaScript
-    ├── main.js              # JavaScript file used in the video
-└── README.md            # Project documentation
+├── 01-variables           # Code files folder for the first video
+│   ├── index.html         # HTML file for setting up JavaScript
+│   ├── script.js            # JavaScript file used in the video
+├── 02-Data-types          # Code files folder for the second video
+│   ├── index.html         # HTML file demonstrating data types
+│   ├── script.js      # JavaScript file with data type examples
+    ├── data-structure.js      # JavaScript file with data structure examples
+└── README.md              # Project documentation
 ```
 
 ### Getting Started
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/javascript-mastery.git
+   git clone https://github.com/Genix-Jailbreak/javascript-mastery.git
    ```
    
 2. **Navigate to the Repository:**
@@ -58,11 +103,11 @@ console.log(age);  // Output: 25
    ```
 
 3. **Open `index.html` in Your Browser:**
-   - Right-click on `index.html` and open it in a browser to see the JavaScript output in the console.
+   - Right-click on `index.html` in the `02-data-types` folder and open it in a browser to see the JavaScript output in the console.
 
 ### What's Next?
 
-Stay tuned for the next video where we’ll explore **JavaScript Data Types** in more detail and learn how to work with strings, numbers, booleans, arrays, and objects!
+Stay tuned for the next video where we’ll explore **JavaScript Operators and Expressions**, learn about the various operators available in JavaScript, and apply them in practical scenarios!
 
 ---
 
