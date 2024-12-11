@@ -115,7 +115,7 @@ let input;
 let numbers = [];
 
 do {
-    input = prompt("Type in3 a number (type 'exit' to stop): ");
+    input = prompt("Type in a number (type 'exit' to stop): ");
 
     numbers.push(input);
 
