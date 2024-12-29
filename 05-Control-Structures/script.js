@@ -1,130 +1,158 @@
-// Sequential Control Structure: Top to bottom approach to how your program is ran or executed in JavaScript
+// Control Structures Code will be.
 
-let simpleVariable = "Simple Value";
+// Sequential
+const age = 10;
 
-function simpleFunction() {
-    return "Simple return value";
+const name = "Mike";
+
+console.log(name);
+
+console.log(age);
+
+// Functions: Follow sequential control structure once they are executed.
+function runAction() {
+    return "Your name is Mike, and you are 10 years of age";
 }
 
-// NOTE: By default,  your javaScript program is sequential // Functional - Paradigm
+console.log(runAction());
 
-// Selective Control Structure: Conditional Control Structure, allows us to perform an action, if a certain condition is either true.
-// if (2 > 1) {
-//     alert("The condition is true");
-// } else {
-//     alert("The condition is not true");
-// }
+// Selective or Conditional
+// Makes use of specific keywords: if, else, switch, and ternary operator.
 
-// Restaurant Food Ordering Application:
+// If Statement (IF ELSE).
+let userPreference = prompt("Enter your preference (food): ");
 
-// 1. We want to get the user's preference of food from the list of foods available.
-
-// - Check if the user's preference is in the list of foods available. 
-// - If it is, return the food (user's preference) from the food list with its price. If it's not, return "Food not available"
-
-const inputElement = document.getElementById("input");
-
-// Define the availableFoods Variable
-const availableFoods = [
-    "Pizza", "Burger", "Fries", "Salad", "Sandwich"
-]
-
-// Get the user's preference.
-function getUserPreference() {
-    // Receive the user's preference in string format.
-    let preference = inputElement.value;
-    // Store the preference in a variable to be used as a condition in the if statement.
-    return preference;
+if (userPreference == "Rice") {
+    console.log("Fish has been added to your Rice");
+} else {
+    console.log("No Fish was added because you are not eating rice");
 }
 
-function serveUserFood() {
-    if (availableFoods.includes(getUserPreference())) {
-        console.log(`Your food is ${getUserPreference()} and it costs $10.99`)
-        // `Your food is ${preference} and it costs $10.99`
-    } else {
-        console.log("That is not available");
-    }
-}
-
-// Voter's Registration
-// - Get the user's age
-// - Determine the user's eligibility (18 years or more)
-// - Register the user if eligible
-
+// A Voter's System -> It checks for the validity of user's age and hands them a voter's card.
 // const userAge = parseInt(prompt("Enter your age: "));
 
-function determineUserEligibility() {
-    if (userAge >= 18) {
-        alert("You are eligible. Registered, Vote wisely");
-    }
-    else if (userAge < 18 && userAge >= 16) {
-        alert("You are not eligible. Kindly submit your details to be notified on when the next registration would take place.")
-    }
-    else {
-        alert("Sorry. You are not eligible to vote.")
-    }
+// The Condition to determine their elibility.
+if (userAge >= 20) {
+    alert("You are eligible and registered. Thank you.");
+} 
+else if (userAge < 20 && userAge >= 16) {
+    alert("Not Eligible. Kindly submit your details as we have a procedure for you.");
+}
+else {
+    alert("You are not eligible. Please come back after 4 years.");
 }
 
-// determineUserEligibility();
+// Repeatitive or Branching (Looping)
+// For Loop, While Loop and Do While Loop.
 
-// Increment: i++
-// Decrement: i--
-// ++i --i -> Alternative increment and decrement
+// for, while, do while.
 
-// Iterative Control Structure: Also known as Loop Control Structure allows us to define a loop of sequence based on a certain condition that stays true and performs an action until it's false.
-// ""For Loop, While Loop"". Do While Loop
+// For Loop: We use this when the number of iterations (loops) is known beforehand.
 
-// A Guessing game - Allow us to guess a number that the computer has generated based on the user's input (NO of steps: 4)
-
-// const userInputNumber = parseInt(prompt("Enter a number"))
-// const computerNumber = Math.ceil((Math.random()) * userInputNumber) + 1;
-
-// console.log(computerNumber)
-
-// for(let i = 4; i > 0; i--) {
-//     let userGuess = parseInt(prompt("Type in your guess"));
-//     if (userGuess === computerNumber) {
-//         alert("You got the guess");
-//         break;
-//     } 
-//     else {
-//         alert(`You guessed wrong. You have ${i} steps left.`);
-//     }
-// }
-
-// NaN stands for Not a Number.
-
-for(let i = 1; i <= 5; i++) {
+console.log("For Loop")
+// Example: Print numbers from 1 to 5
+for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
 
-// The While Loop: While loop is an iterative control structure that will continue to execute as long as the specified condition is true
+const students = ["John", "Mark", "Tobi", "Ebube"];
 
-let count = 1;
-
-while (count <= 5) {
-    console.log(count);
-    
-    count++;
+// Print out the names
+for (let i = 0; i <= students.length; i++) {
+    console.log(students[i]);
 }
 
-console.log("Break out of the loop");
+// While Loop: This loop is used when the number of iterations (loops) is not known beforehand.
+console.log("While Loop")
 
-// Do While Loop: The do while is the same as the while loop, only that it executes your code at least (first time) before it reads the condition
-let input;
-let numbers = [];
+// Example: Print numbers from 1 to 5
+let i = 1; // Starting point
+
+while(i <= 5) {
+    console.log(i);
+    i++;
+}
+
+// Real World Example: Guessing Game. Allows them only 3 trials after a wrong guess to get the secret number.
+const secretNumber = 10;
+const guessInput = document.getElementById("input");
+const displayMessage = document.getElementById("Display");
+const trialsDisplay = document.getElementById("NoOfTrials");
+
+// Initialze the trials counter
+let trials = 3;
+
+document.querySelector("button").addEventListener('click', () => {
+    while (trials > 0) {
+        const guess = parseInt(guessInput.value);
+
+        // Validate the Input. (If what the user entered in is a number)
+        if (isNaN(guess)) {
+            displayMessage.innerText = "Please enter a valid number";
+            break;
+        }
+
+        // Check if the guess is correct
+        if (guess === secretNumber) {
+            displayMessage.innerText = "You guessed right";
+            trialsDisplay.innerText = ""; // Clear any trial display value because the user guessed right.
+            break;
+        } else {
+            trials--;
+            // If the number of trials is still greater than 0
+            if (trials > 0) {
+                displayMessage.innerText = "You guessed wrong";
+                trialsDisplay.innerText = `You have ${trials} trials left.`;
+            } 
+            // If the number of trials is equal to 0
+            else {
+                displayMessage.innerText = "Game Over!. You ran out of trials.";
+                trialsDisplay.innerText = "";
+            }
+        }
+
+        break;
+    }
+})
+
+// Do While Loop: This loop is used when you want the (iteration) loop to execute at least once before checking the condition
+
+// Example: Print Numbers from 1 to 5
+let j = 1;
+
+console.log("Do While Loop Example");
 
 do {
-    input = prompt("Type in a number (type 'exit' to stop): ");
+    // Perform the first action (print 1)
+    console.log(j);
+    j++;
+} while (j <= 5);
 
-    numbers.push(input);
+// An Authentication System. Simulate (Model) A User Login Process.
+let correctPassword = "test123";
+let userInput;
+let loginAttempts = 5; // Try at most 5 times to login.
 
-    if (input !== "exit") {
-
-        if (input = "yes") {
-            let age = prompt("What's your age?: ");
-            
-            if (age) break;
+do {
+    // Prompt the user to enter their password
+    userInput = prompt(`Enter your password. You have ${loginAttempts} number of attemps left: `);
+    
+    // If the user Password is correct based on their input.
+    if (userInput === correctPassword) {
+        alert("Login successful.");
+        break;
+    } else {
+        loginAttempts--;
+        if (loginAttempts > 0){
+            alert("Incorrect password. Try again.");
+        } else {
+            alert("You have used up all your login attempts. Account Locked.");
         }
     }
-    } while (input !== "exit"); 
+} while (loginAttempts > 0);
+
+// Exercise: Build the Guessing Game using the For Loop, While Loop, and Do While Loop.  Use the following rules:
+
+// - The user has 7 attempts to guess the number.
+// - The number to guess is between 1 and 70.
+// - The user should be asked to type in a valid number 3 times after typing in an invalid.
