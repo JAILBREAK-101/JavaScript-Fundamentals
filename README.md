@@ -1,3 +1,5 @@
+
+
 # JavaScript Mastery: From Basics to Breakthrough Projects  
 
 Welcome to **JavaScript Mastery: From Basics to Breakthrough Projects**. This series is designed to help you master JavaScript from the ground up, covering the fundamentals, core concepts, and practical implementations. By the end of the series, we’ll build a full-fledged project to apply everything learned.  
@@ -153,12 +155,110 @@ console.log(passedStudents); // Output: [80, 90, 76]
 
 ---
 
-### What's Next?  
-Stay tuned for the next video where we’ll explore **JavaScript Operators and Expressions**, learn about the various operators available in JavaScript, and apply them in practical scenarios!  
+🎥 Video 4: Data Type Methods in JavaScript
 
----  
+Overview
 
-## 📧 Get in Touch  
+In this video, we explore the various methods available for different data types in JavaScript. Understanding these methods will help you manipulate data more effectively and write cleaner, more efficient code.
 
-If you have any questions, suggestions, or want to share your progress, feel free to connect with me on [Twitter](https://x.com/GenixTech1) or drop a comment on the YouTube video. Let’s learn and build together.  
-```
+Key Concepts Covered
+
+String Methods
+Discover useful string methods like .length, .toUpperCase(), .toLowerCase(), .includes(), .slice(), and .replace().
+
+Array Methods
+Learn how to use array methods such as .push(), .pop(), .shift(), .unshift(), .slice(), .splice(), .map(), .filter(), and .reduce().
+
+Object Methods
+Explore methods to work with objects, including Object.keys(), Object.values(), and Object.entries().
+
+
+Code Snippet
+
+// String Methods  
+let text = "JavaScript Mastery";  
+console.log(text.length);            // Output: 18  
+console.log(text.toUpperCase());     // Output: JAVASCRIPT MASTERY  
+console.log(text.includes("Script")); // Output: true  
+
+// Array Methods  
+let numbers = [10, 20, 30, 40, 50];  
+numbers.push(60);  
+console.log(numbers);                // Output: [10, 20, 30, 40, 50, 60]  
+
+let filtered = numbers.filter(num => num > 30);  
+console.log(filtered);               // Output: [40, 50, 60]  
+
+// Object Methods  
+let user = { name: "Alice", age: 30, city: "New York" };  
+console.log(Object.keys(user));      // Output: ["name", "age", "city"]  
+console.log(Object.values(user));    // Output: ["Alice", 30, "New York"]
+
+🔗 [Watch Video 4 on YouTube](https://youtu.be/Xlz7lvLmfyc?si=JT8t-OVbQvpHp-d0)
+
+
+---
+
+🎥 Video 5: Control Structures in JavaScript
+
+Overview
+
+This video focuses on control structures in JavaScript, which are essential for controlling the flow of execution in your programs. We'll cover if statements, for loops, while loops, and switch statements.
+
+Key Concepts Covered
+
+Conditional Statements
+Learn how to use if, else if, and else statements to control the flow based on different conditions.
+
+Looping Constructs
+Understand how to use for, while, and do...while loops to execute a block of code multiple times.
+
+Switch Statements
+Discover how switch statements can be used as a cleaner alternative to multiple if...else conditions.
+
+
+Code Snippet
+
+// If-else Statement  
+let score = 85;  
+if (score >= 90) {  
+    console.log("Grade: A");  
+} else if (score >= 75) {  
+    console.log("Grade: B");  
+} else {  
+    console.log("Grade: C");  
+}  
+
+// For Loop  
+for (let i = 0; i < 5; i++) {  
+    console.log(`Iteration ${i}`);  
+}  
+
+// Switch Statement  
+let day = "Monday";  
+switch (day) {  
+    case "Monday":  
+        console.log("Start of the work week");  
+        break;  
+    case "Friday":  
+        console.log("End of the work week");  
+        break;  
+    default:  
+        console.log("Midweek day");  
+}
+
+🔗 [Watch Video 5 on YouTube](https://youtu.be/r-x4Jwnsifg?si=ToKWGmLHe3dmrylf)
+
+---
+
+What's Next?
+
+In the upcoming videos, we'll delve into JavaScript Operators and the DOM, learning how to interact with the Document Object Model (DOM) and manipulate HTML elements using JavaScript. Stay tuned!
+
+
+---
+
+📧 Get in Touch
+
+If you have any questions, suggestions, or want to share your progress, feel free to connect with me on Twitter or drop a comment on the YouTube video. Let’s learn and build together.
+
